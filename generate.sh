@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ---------- CONFIG ----------
-ITERATIONS=${ITERATIONS:-5}           # number of commits/merges to create
+ITERATIONS=${ITERATIONS:-500}           # number of commits/merges to create
 MAIN_BRANCH=${MAIN_BRANCH:-main}     # your main branch name (change to master if needed)
 REMOTE=${REMOTE:-origin}             # remote name
 AUTHOR_NAME=${AUTHOR_NAME:-}         # optional: set to your GitHub display name
@@ -38,9 +38,9 @@ fi
 
 # ---------- loop ----------
 for i in $(seq 1 "$ITERATIONS"); do
-  BRANCH="feature/eth-contract-3-${i}"
-  CONTRACT_DIR="contracts"
-  CONTRACT_FILE="${CONTRACT_DIR}/SimpleStorages_${i}.sol"
+  BRANCH="feature/eth-contract-${i}"
+  CONTRACT_DIR="contracts_ext"
+  CONTRACT_FILE="${CONTRACT_DIR}/SimpleStorageC_${i}.sol"
 
   echo
   echo "=== Iteration $i: branch $BRANCH -> create $CONTRACT_FILE ==="
