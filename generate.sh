@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-ITERATIONS=${ITERATIONS:-100}
+ITERATIONS=${ITERATIONS:-300}
 MAIN_BRANCH=${MAIN_BRANCH:-main}
 REMOTE=${REMOTE:-origin}
 
