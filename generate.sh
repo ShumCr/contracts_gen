@@ -7,12 +7,12 @@ REMOTE=${REMOTE:-origin}
 
 # Get "now" and "6 months ago" in epoch seconds
 NOW=$(date +%s)
-SIX_MONTHS_AGO=$(date -d "8 months ago" +%s)
+SIX_MONTHS_AGO=$(date -d "3 months ago" +%s)
 
 for i in $(seq 1 "$ITERATIONS"); do
-  BRANCH="feature/eth-contract-r4-${i}"
-  CONTRACT_DIR="contracts_r4"
-  CONTRACT_FILE="${CONTRACT_DIR}/SimpleStorage_r4_${i}.sol"
+  BRANCH="feature/eth-contract-r5-${i}"
+  CONTRACT_DIR="contracts_r5"
+  CONTRACT_FILE="${CONTRACT_DIR}/SimpleStorage_r5_${i}.sol"
 
   echo
   echo "=== Iteration $i: branch $BRANCH ==="
